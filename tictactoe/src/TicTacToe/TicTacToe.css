@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+table td {
+    border: 2px solid rgb(125, 178, 221);
+    border-radius: 5px;
+    height: 120px;
+    width: 120px;
+}

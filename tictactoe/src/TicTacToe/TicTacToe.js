@@ -1,29 +1,33 @@
 import React from 'react';
-
+import './TicTacToe.css'
 const TicTacToe = () => {
+    const handleClick = () => {
+        alert('test');
+    }
     const Cell = () =>{
         return(
-            <td>-</td>
+            <td onClick={() => handleClick()}>-</td>
         )
     }
+
     return (
-        <div>
+        <div className='container'>
             <table>
                 <tbody>
                     <tr>
-                        <Cell/>
-                        <Cell/>
-                        <Cell/>
+                        <Cell num={1}/>
+                        <Cell num={2}/>
+                        <Cell num={3}/>
                     </tr>
                     <tr>
-                        <Cell/>
-                        <Cell/>
-                        <Cell/>
+                        <Cell num={4}/>
+                        <Cell num={5}/>
+                        <Cell num={6}/>
                     </tr>
                     <tr>
-                        <Cell/>
-                        <Cell/>
-                        <Cell/>
+                        <Cell num={7}/>
+                        <Cell num={8}/>
+                        <Cell num={9}/>
                     </tr>
                 </tbody>
             </table>
