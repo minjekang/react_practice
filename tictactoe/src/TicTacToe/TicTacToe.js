@@ -2,19 +2,26 @@ import React, { useState } from 'react';
 import './TicTacToe.css'
 const TicTacToe = () => {
     const [turn, setTurn] = useState('X');
+    const [cells, setCells] = useState(Array(9).fill(''));
 
     const handleClick = (num) => {
+        let squares = [...cells];
+
         if (turn === 'X'){
-            setTurn('O')
+            squares[num] = 'X';
+            setTurn('O');
         }
         else {
-            setTurn('X')
+            squares[num] = 'O';
+            setTurn('X');
         }
+
+        setCells(squares);
     }
 
     const Cell = ({num}) =>{
         return(
-            <td onClick={() => handleClick(num)}>-</td>
+            <td onClick={() => handleClick(num)}>{cells[num]}</td>
         )
     }
 
