@@ -1,10 +1,28 @@
 .container{
     display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
     justify-content: center;
+    margin: auto;
+    margin-top: 200px;
 }
 table td {
-    border: 2px solid rgb(125, 178, 221);
+    border: 2px solid rgb(125, 148, 221);
     border-radius: 5px;
     height: 120px;
     width: 120px;
+}
+.re{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(129, 142, 212);
+    color: white;
+}
+.re:hover{
+    width: 120px;
+    height: 38px;
+    transition: 0.3s;
 }
