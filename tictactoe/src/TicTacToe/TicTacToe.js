@@ -57,7 +57,13 @@ const TicTacToe = () => {
 
         checkForWinner(squares);
         setCells(squares);
-    }
+    };
+
+    const handleRestart = () => {
+        setWinner(null);
+        setCells(Array(10).fill(''))
+        setTurn('X');
+    };
 
     const Cell = ({num}) =>{
         return(
@@ -90,7 +96,7 @@ const TicTacToe = () => {
             {winner && (
                 <>
                 <p>{winner} is win!</p>
-                <button className='re'>Re</button>
+                <button className='re' onClick={() => handleRestart()}>Re</button>
                 </>
             )}
         </div>
