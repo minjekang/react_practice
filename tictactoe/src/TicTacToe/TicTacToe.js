@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './TicTacToe.css'
 const TicTacToe = () => {
-    const [turn, setTurn] = useState('X');
+    const [turn, setTurn] = useState('🌝');
     const [cells, setCells] = useState(Array(10).fill(''));
     const [winner, setWinner] = useState();
-
+    
     const checkForWinner = (squares) => {
         let combos = {
             across: [
@@ -46,13 +46,13 @@ const TicTacToe = () => {
 
         let squares = [...cells];
 
-        if (turn === 'X'){
-            squares[num] = 'X';
-            setTurn('O');
+        if (turn === '🌝'){
+            squares[num] = '🌝';
+            setTurn('🌚');
         }
         else {
-            squares[num] = 'O';
-            setTurn('X');
+            squares[num] = '🌚';
+            setTurn('🌝');
         }
 
         checkForWinner(squares);
@@ -62,7 +62,7 @@ const TicTacToe = () => {
     const handleRestart = () => {
         setWinner(null);
         setCells(Array(10).fill(''))
-        setTurn('X');
+        setTurn('🌝');
     };
 
     const Cell = ({num}) =>{
@@ -95,8 +95,8 @@ const TicTacToe = () => {
             </table>
             {winner && (
                 <>
-                <p>{winner} is win!</p>
-                <button className='re' onClick={() => handleRestart()}>Re</button>
+                    <p>{winner} win!</p>
+                    <button className='re' onClick={() => handleRestart()}>Re</button>
                 </>
             )}
         </div>
