@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
 import Start from "./Start";
+import "./Router.scss";
 
 export default function Home() {
   return (
@@ -10,10 +11,10 @@ export default function Home() {
       <BrowserRouter>
         <nav>
           <Link to="/">Home</Link>
-          <Link to="about">About</Link>
-          <Link className="la" to="contact">
+          <NavLink to="about">About</NavLink>
+          <NavLink className="la" to="contact">
             Contact
-          </Link>
+          </NavLink>
         </nav>
 
         <Routes>
