@@ -5,7 +5,7 @@ import TicTactoe from "./TicTacToe/TicTacToe";
 function App() {
   return (
     <div className="App">
-      <MyComponent />
+      <MyComponent>리액트</MyComponent>
     </div>
   );
 }
