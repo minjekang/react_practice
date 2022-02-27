@@ -1,15 +1,10 @@
 import "./App.css";
+import Counter from "./Counter";
 import MyComponent from "./MyComponent";
 import Home from "./Router-pr/Home";
 import TicTactoe from "./TicTacToe/TicTacToe";
 function App() {
-  return (
-    <div className="App">
-      <MyComponent name="React" favoriteNumber={7}>
-        리액트
-      </MyComponent>
-    </div>
-  );
+  return <Counter />;
 }
 
 export default App;
