@@ -4,3 +4,9 @@
 .failure {
   background-color: lightcoral;
 }
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px rgb(68, 68, 68) solid;
+  margin-right: 1rem;
+}
