@@ -6,8 +6,9 @@ import Home from "./Router-pr/Home";
 import TicTactoe from "./TicTacToe/TicTacToe";
 import EventPractice from "./EventPractice";
 import ValidationSample from "./ValidationSample";
+import IterationSample from "./IterationSample";
 
 function App() {
-  return <ValidationSample />;
+  return <IterationSample />;
 }
 export default App;
