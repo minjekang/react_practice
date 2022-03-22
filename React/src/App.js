@@ -7,8 +7,9 @@ import TicTactoe from "./TicTacToe/TicTacToe";
 import EventPractice from "./EventPractice";
 import ValidationSample from "./ValidationSample";
 import IterationSample from "./IterationSample";
+import LifeCycleSample from "./LifeCycleSample";
 
 function App() {
-  return <IterationSample />;
+  return <LifeCycleSample />;
 }
 export default App;
