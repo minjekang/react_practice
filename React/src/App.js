@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import Say from "./Say";
 import Counter from "./Counter";
@@ -11,6 +12,19 @@ import LifeCycleSample from "./LifeCycleSample";
 import Info from "./Info";
 
 function App() {
-  return <Info />;
+  const [visible, setVisible] = useState(false);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setVisible(!visible);
+        }}
+      >
+        {visible ? "숨기기" : "보이기"}
+      </button>
+      <hr />
+      {visible && <Info />}
+    </div>
+  );
 }
 export default App;
