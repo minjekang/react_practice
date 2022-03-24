@@ -12,6 +12,6 @@ import LifeCycleSample from "./LifeCycleSample";
 import Info from "./Info";
 
 function App() {
-  return <Counter />;
+  return <Info />;
 }
 export default App;
