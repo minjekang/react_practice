@@ -8,8 +8,9 @@ import EventPractice from "./EventPractice";
 import ValidationSample from "./ValidationSample";
 import IterationSample from "./IterationSample";
 import LifeCycleSample from "./LifeCycleSample";
+import Info from "./Info";
 
 function App() {
-  return <LifeCycleSample />;
+  return <Info />;
 }
 export default App;
