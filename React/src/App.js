@@ -10,8 +10,9 @@ import ValidationSample from "./ValidationSample";
 import IterationSample from "./IterationSample";
 import LifeCycleSample from "./LifeCycleSample";
 import Info from "./Info";
+import Average from "./Average";
 
-function App() {
-  return <Info />;
-}
+const App = () => {
+  return <Average />;
+};
 export default App;
