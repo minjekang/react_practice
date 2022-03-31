@@ -11,8 +11,9 @@ import IterationSample from "./IterationSample";
 import LifeCycleSample from "./LifeCycleSample";
 import Info from "./Info";
 import Average from "./Average";
+import RefSample from "./RefSample";
 
 const App = () => {
-  return <Average />;
+  return <RefSample />;
 };
 export default App;
