@@ -1,26 +1,12 @@
 import React, { useReducer } from "react";
-
-function reducer(state, action) {
-  //action.type에 따라 다르 작업 수행
-  switch (action.type) {
-    case "INCREMENT":
-      return { value: state.value + 1 };
-    case "DECREMENT":
-      return { value: state.value - 1 };
-    default:
-      return { state, [action.name]: action.value };
-  }
-}
+import useInputs from "./useInputs";
 
 const Info = () => {
-  const [state, dispatch] = useReducer(reducer, {
+  const [state, dispatch] = useInputs({
     name: "",
     nickname: "",
   });
   const { name, nickname } = state;
-  const onChange = (e) => {
-    dispatch(e.target);
-  };
 
   return (
     <div>

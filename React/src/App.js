@@ -14,6 +14,6 @@ import Average from "./Average";
 import RefSample from "./RefSample";
 
 const App = () => {
-  return <RefSample />;
+  return <Info />;
 };
 export default App;
