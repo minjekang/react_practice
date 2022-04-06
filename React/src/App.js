@@ -12,8 +12,9 @@ import LifeCycleSample from "./LifeCycleSample";
 import Info from "./Info";
 import Average from "./Average";
 import RefSample from "./RefSample";
+import SassComponent from "./SassComponent";
 
 const App = () => {
-  return <Info />;
+  return <SassComponent />;
 };
 export default App;
