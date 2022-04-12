@@ -13,8 +13,9 @@ import Info from "./Info";
 import Average from "./Average";
 import RefSample from "./RefSample";
 import SassComponent from "./SassComponent";
+import CSSModule from "./CSSModule";
 
 const App = () => {
-  return <SassComponent />;
+  return <CSSModule />;
 };
 export default App;
