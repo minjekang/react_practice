@@ -2,26 +2,28 @@ import React, { useState, useCallback, useRef } from "react";
 import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
 import TodoTemplate from "./components/TodoTemplate";
-const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: "리액트 기초 알아보기",
-      checked: true,
-    },
-    {
-      id: 2,
-      text: "컴포넌트 스타일링해 보기",
-      checked: true,
-    },
-    {
-      id: 3,
-      text: "노혁 알아보기",
-      checked: false,
-    },
-  ]);
 
-  const nextId = useRef(4);
+function createBukTodos() {
+  const array = [];
+  for (let i = 1; i <= 2500; i++) {
+    array.push({
+      id: i,
+      text: (
+        <span class="co31">
+          <span class="co31">할</span> <span class="co31">일</span>{" "}
+          <span class="co33">{i}</span>
+        </span>
+      ),
+      checked: false,
+    });
+  }
+  return array;
+}
+
+const App = () => {
+  const [todos, setTodos] = useState(createBukTodos);
+
+  const nextId = useRef(2501);
 
   const onInsert = useCallback(
     (text) => {
