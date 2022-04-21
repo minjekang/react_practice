@@ -2,7 +2,7 @@ import React, { useRef, useCallback, useState } from "react";
 
 const App = () => {
   const nextId = useRef(1);
-  const [form, setForm] = useState({ name: ",username:" });
+  const [form, setForm] = useState({ name: "" });
   const [data, setData] = useState({
     array: [],
     uselessValue: null,
@@ -29,24 +29,13 @@ const App = () => {
         name: form.name,
         username: form.username,
       };
-      (<>
-        <span class="co44">// array</span>
-        <span class="co44">에</span>
-        <span class="co44">새</span> <span class="co44">항목</span>
-        <span class="co44">등록</span>
-        <span class="co47">setData</span>
-        <span class="co33"></span>
-        <span class="co35">...</span>
-        <span class="co33">data,</span>
-      </>)({
+
+      setData({
+        ...data,
         array: data.array.concat(info),
       });
-      (<>
-        <span class="co44">// form </span>
-        <span class="co44">초기화</span>
-        <span class="co47">setForm</span>
-        <span class="co33"></span>
-      </>)({
+
+      setForm({
         name: "",
         username: "",
       });
