@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import create from "zustand";
 
+const useStore = create((set) => ({
+  count: 0,
+  count2: 0,
+  up() {
+    set((state) => ({ count: state.count + 1 }));
+  },
+  down() {
+    set((state) => ({ count2: state.count2 - 1 }));
+  },
+}));
 function App() {
+  //useStore();
+  const { count, up } = useStore();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div classname="App">
+      <p>구독자 {count}</p>
+      <button
+        onClick={() => {
+          up();
+        }}
+      >
+        +1
+      </button>
+      <Card />
+    </div>
+  );
+}
+
+function Card() {
+  const { count2, down } = useStore();
+  return (
+    <div classname="App">
+      <p>구독자 {count2}</p>
+      <button
+        onClick={() => {
+          down();
+        }}
+      >
+        -1
+      </button>
     </div>
   );
 }
