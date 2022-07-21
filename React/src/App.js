@@ -15,8 +15,9 @@ import RefSample from "./RefSample";
 import SassComponent from "./SassComponent";
 import CSSModule from "./CSSModule";
 import Todo from "./todo/Todo";
+import CoinTracker from "./Coin Tracker/CoinTracker";
 
 const App = () => {
-  return <Todo />;
+  return <CoinTracker />;
 };
 export default App;
