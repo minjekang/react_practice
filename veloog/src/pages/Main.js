@@ -1,13 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 const Main = () => {
-  return (
-    <div>
-      <Link to="/">main</Link>
-      <br />
-      <Link to="/search">search</Link>
-    </div>
-  );
+  return;
 };
 
 export default Main;

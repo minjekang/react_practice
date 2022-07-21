@@ -1,10 +1,15 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-const header = () => {
-    return(
-        
-    )
+import "../styles/header.scss";
+const Header = () => {
+  return (
+    <>
+      <header className="headroom">
+        <h3>veloog</h3>
+        <div className="searchLogin"></div>
+      </header>
+      <div className="b" />
+    </>
+  );
 };
 
-export default header;
+export default Header;
